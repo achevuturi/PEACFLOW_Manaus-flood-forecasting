@@ -28,9 +28,17 @@ cdo monmean chirps-v2.0.$((year-1))-$year.ndjf.days_p05.nc chirps-v2.0.$((year-1
 rm -f chirps-v2.0.????.??.days_p05.nc  chirps-v2.0.$((year-1))-$year.ndjf.days_p05.nc
 
 tput setaf 1 #red
+echo "Downloading AMO data"
+tput sgr0 #black
+wget https://psl.noaa.gov/data/correlation/amon.us.long.data 
+head -n -4 amon.us.long.data > amo.txt
+rm -f amon.us.long.data
+
+tput setaf 1 #red
 echo "Running the forecasting model for $year"
 tput sgr0 #black
 
 python3.7 -W ignore forecast_model.py $year
 
-#rm -f chirps-v2.0.$((year-1))-$year.ndjf.mons_p05.nc
+#Removing all dowloaded data
+#rm -f amo.txt chirps-v2.0.$((year-1))-$year.ndjf.mons_p05.nc
