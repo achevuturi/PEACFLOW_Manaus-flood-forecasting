@@ -7,6 +7,9 @@ import scipy as sp
 from scipy import stats
 import read_amo_index as idxamo
 import sys
+import colorama
+from colorama import Fore, Style
+
 
 YR=int(sys.argv[1:][0])
 
@@ -55,7 +58,7 @@ input_var = np.array([rain, YR, pmin, amo])
 
 #Calculating the forecast
 forecast = np.nansum(forecast_model['Coefficients'][1:].values*input_var) + forecast_model['Coefficients'][0]
-print(str('Forecast for year ')+str(YR)+' = '+format(forecast, '.2f')+'m')
 
-#print(forecast)
-
+#Printing forecast
+print(Fore.BLUE + str('Forecast for year ')+str(YR)+' = '+format(forecast, '.2f')+'m')
+print(Style.RESET_ALL)
