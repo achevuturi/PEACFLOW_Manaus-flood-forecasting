@@ -31,7 +31,7 @@ def amo_index(SY,EY,MON):
   import numpy as np
   import pandas as pd
   
-  df = pd.read_table('amo.txt', delim_whitespace=True, header=None, skiprows=1) 
+  df = pd.read_table('/gws/nopw/j04/klingaman/amulya/data/obs/Atlantic-SST/amo.txt', delim_whitespace=True, header=None, skiprows=1) 
   anom = df.values[:,1:].reshape((df.values.shape[0]*12))
   yrs  = np.repeat(df[0].values, 12)
   mons  = np.tile(np.arange(1,12+1,1), df.values.shape[0])
