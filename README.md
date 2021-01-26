@@ -10,7 +10,7 @@ Forecast model from the Predicting the Evolution of the Amazon Catchment to Fore
 The software contained in this repository forecasts maximum water level for Negro River at Manaus for any year from 2005 onwards. This repository has a shell script (.sh) which downloads the requred CHIRPS rainfall estimate and executes the flood forecasting model (.py and .pkl) to give the flood forecast for the year requested. There are three different forecast models hosted within the repository, which forecast maximum water level at Manaus at three different lead times: March (obs_forecast_model_mar.sh), February (obs_forecast_model_feb.sh) and January (obs_forecast_model_jan.sh). For any current year, the forecast models only work after the middle of the month of the forecast, due to the lag in the CHIRPS rainfall uploads.
 
 **Requirements:**
-To run the models hosted in this repository needs Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/); Numpy (http://www.numpy.org) and Pandas (https://pandas.pydata.org/)
+To run the models hosted in this repository needs Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/), Numpy (http://www.numpy.org) and Pandas (https://pandas.pydata.org/)
 
 **Modules:**
 ......
