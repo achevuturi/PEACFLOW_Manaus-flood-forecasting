@@ -21,9 +21,7 @@ echo "Merging CHIRPS data for ND and converting to monthly means"
 tput sgr0 #black
 
 cdo mergetime chirps-v2.0.????.??.days_p05.nc chirps-v2.0.$((year-1)).nd.days_p05.nc
-
 cdo monmean chirps-v2.0.$((year-1)).nd.days_p05.nc chirps-v2.0.$((year-1)).nd.mons_p05.nc
-
 rm -f chirps-v2.0.*.days_p05.nc  
 
 tput setaf 1 #red
