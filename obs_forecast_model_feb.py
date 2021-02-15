@@ -11,10 +11,6 @@ YR=int(sys.argv[1:][0])
 #Reading the forecasting model 
 forecast_model = pd.read_pickle('obs_forecast_model_feb.pkl')
 
-#Previous year minimum
-dep = cf.read('water_level_at_manaus.nc')[0]
-pmin = np.nanmin(dep.subspace(T=cf.year(YR-1)).array)
-
 #AMO
 MON = np.array([1,11,12])
 amo = np.nanmean(idxamo.amo_index(YR-1,YR,MON)[1:-2])
