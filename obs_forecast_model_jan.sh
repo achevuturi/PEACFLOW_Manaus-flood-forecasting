@@ -16,6 +16,11 @@ tput sgr0 #black
 wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p05/by_month/chirps-v2.0.$((year-1)).11.days_p05.nc
 wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p05/by_month/chirps-v2.0.$((year-1)).12.days_p05.nc
 
+wget https://www.portodemanaus.com.br/?pagina=niveis-maximo-minimo-do-rio-negro -O webpage.txt
+var=`grep -n ">$((year-1))</td>" webpage.txt | cut -f1 -d":"`
+awk "NR==$((var+3))" webpage.txt | tail -c 12 | cut -c1-5 > prev_min.txt
+rm -f webpage.txt
+
 tput setaf 1 #red
 echo "Merging CHIRPS data for ND and converting to monthly means"
 tput sgr0 #black
@@ -32,5 +37,5 @@ python3.7 -W ignore obs_forecast_model_jan.py $year
 
 tput setaf 1 #red
 echo "Deleting dowloaded data"
-rm -f amo.txt chirps-v2.0.*.mons_p05.nc
+rm -f prev_min.txt amo.txt chirps-v2.0.*.mons_p05.nc
 tput sgr0 #black
