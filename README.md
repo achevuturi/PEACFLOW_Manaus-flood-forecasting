@@ -3,6 +3,9 @@
 **Author:**
 Amulya Chevuturi, National Centre for Atmospheric Science, Department of Meteorology, University of Reading, Reading, UK
 
+**Collaborators:**
+???
+
 **Project and Funding:**
 Forecast model from the Predicting the Evolution of the Amazon Catchment to Forecast the Level Of Water (PEACFLOW) project. PEACFLOW project is funded by Newton Fund through the Climate Science for Service Partnership (CSSP) Brazil project at UK Met Office.
 
@@ -42,5 +45,6 @@ The forecast of the maximum water level of Negro River at Manaus (in meters) is 
 
 **Citation:**
 Users who apply the software resulting in presentations or papers are kindly asked to cite the publication below.
+Acknowedgement: ???
 
 *Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2020) Seasonal forecasting of annual flood levels at Manaus station using multiple linear regression. Climate Resilience and Sustainability, in prep.*
