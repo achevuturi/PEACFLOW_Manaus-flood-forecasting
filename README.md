@@ -43,8 +43,9 @@ After this command, the user needs to provide the year for which the forecast is
 **Output:**
 The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line. All the downloaded data (CHIRPS rainfall and AMO index text file) is deleted.
 
+**Acknowedgement:**
+???
+
 **Citation:**
 Users who apply the software resulting in presentations or papers are kindly asked to cite the publication below.
-Acknowedgement: ???
-
 *Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2020) Seasonal forecasting of annual flood levels at Manaus station using multiple linear regression. Climate Resilience and Sustainability, in prep.*
