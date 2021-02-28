@@ -28,14 +28,14 @@ This repository is for forecasting annual maximum water level for Negro River at
 **Modules:**
 ???
 
-**Acknowedgement:** Please include the following form of acknowledgement in any publications that use any of the code stored in this repository.
+**Acknowedgement:** Please include the following form of acknowledgement in any presentations/publications that use any of the code stored in this repository.
 
 The development of PEACFLOW_Manaus-flood-forecasting repository on GitHub (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting) was supported by the Newton Fund through the Met Office Climate Science for Service Partnership Brazil (CSSP Brazil) and was developed at University of Reading
 
 **Citation:**
-Users who apply the software resulting in presentations or papers are kindly asked to cite the publication below.
+Depending on the code used, the users who apply the software resulting in presentations or papers, are kindly asked to cite one/both of the publication below:
 
-*Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for Negro River at Manaus. Climate Resilience and Sustainability, in prep.*
+For https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations please use: *Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for Negro River at Manaus. Climate Resilience and Sustainability, in prep.*
 
-*Chevuturi A, Woolnough SJ, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for Negro River at Manaus using observations and seasonal forecasts. Climate Resilience and Sustainability, in prep.*
+For https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Seasonal-Forecasts please use: *Chevuturi A, Woolnough SJ, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for Negro River at Manaus using observations and seasonal forecasts. Climate Resilience and Sustainability, in prep.*
 
