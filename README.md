@@ -3,11 +3,11 @@
 **Author:** *Amulya Chevuturi*, National Centre for Atmospheric Science, Department of Meteorology, University of Reading, Reading, UK (a.chevuturi@reading.ac.uk)
 
 **Contributors:**\
-*Nicholas P. Klingaman*, National Centre for Atmospheric Science, Department of Meteorology, University of Reading, Reading, UK\
-*Steven J. Woolnough*, National Centre for Atmospheric Science, Department of Meteorology, University of Reading, Reading, UK\
+*Nicholas P. Klingaman*, National Centre for Atmospheric Science, Department of Meteorology, University of Reading, UK\
+*Steven J. Woolnough*, National Centre for Atmospheric Science, Department of Meteorology, University of Reading, UK\
 *Conrado M. Rudorff*, National Center for Monitoring and Early Warning of Natural Disasters (CEMADEN), Brazil\
-*Caio A. S. Coelho*, Centre for Weather Forecast and Climate Studies (CPTEC), National Institute for Space Research (INPE), Cachoeira Paulista, SP, Brazil\
-*Jochen Schöngart*, Instituto Nacional de Pesquisas da Amazônia (INPA), Manaus, Brazil\
+*Caio A. S. Coelho*, Centre for Weather Forecast and Climate Studies (CPTEC), National Institute for Space Research (INPE), Brazil\
+*Jochen Schöngart*, Instituto Nacional de Pesquisas da Amazônia (INPA), Manaus, Brazil
 
 **Contact:** For more information please contact Prof. Steve Woolnough (s.j.woolnough@reading.ac.uk)
 
