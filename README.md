@@ -30,5 +30,6 @@ This repository is for forecasting annual maximum water level for Negro River at
 Users who apply the software resulting in presentations or papers are kindly asked to cite the publication below.
 
 *Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for Negro River at Manaus. Climate Resilience and Sustainability, in prep.*
+
 *Chevuturi A, Woolnough SJ, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for Negro River at Manaus using observations and seasonal forecasts. Climate Resilience and Sustainability, in prep.*
 
