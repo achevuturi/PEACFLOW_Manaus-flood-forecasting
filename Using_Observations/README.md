@@ -1,15 +1,15 @@
 **Flood forecasting for Negro River at Manaus using observations**
 
 **Description:**
-The software contained in this repository forecasts maximum water level for Negro River at Manaus for any year from 2005 onwards. This repository has a shell script (.sh) which downloads the requred CHIRPS rainfall estimate and executes the flood forecasting model (.py and .pkl) to give the flood forecast for the year requested. There are three different forecast models hosted within the repository, which forecast maximum water level at Manaus at three different lead times: March (obs_forecast_model_mar.sh), February (obs_forecast_model_feb.sh) and January (obs_forecast_model_jan.sh). For any current year, the forecast models only work after the middle of the month of the forecast, due to the lag in the CHIRPS rainfall uploads.
+This code forecasts maximum water level for Negro River at Manaus for any year from 2005 onwards. This repository has a shell script (.sh) which downloads the requred CHIRPS rainfall estimate and executes the flood forecasting model (.pkl) to give the flood forecast for the year requested (.py). There are three different forecast models hosted within the repository, which forecast maximum water level at Manaus at three different lead times: March (obs_forecast_model_mar.sh), February (obs_forecast_model_feb.sh) and January (obs_forecast_model_jan.sh). For any year (2005--curent), the forecast models only work after the middle of the month of the forecast, due to the lag in the CHIRPS rainfall uploads.
 
 **Requirements:**
-To run the models hosted in this repository needs Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/), Numpy (http://www.numpy.org) and Pandas (https://pandas.pydata.org/)
+The models hosted in this repository need Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/), Numpy (http://www.numpy.org) and Pandas (https://pandas.pydata.org/)
 
 **Modules:**
 
 For each forecast model there are three associated files:
-1. Shell Script (.sh): This is the main script that downloads the data, runs the model, gives the output and then deletes the data.
+1. Shell Script (.sh): This is the main script that downloads the data, runs the model, gives the output and then deletes the downloaded data.
 2. Python Script (.py): This is the python script that calculated the output using the downloaded data and forecast model information. 
 3. Pandas File (.pkl): This is the statistical forecast model information that is used to calculate the output for each year. 
 
@@ -25,17 +25,18 @@ Other accessory files are:
 
 **Execution:**
 The model works by running the shell scripts of the month which needs the forecast using the example command below: 
-./obs_forecast_model_mar.sh
+**./obs_forecast_model_mar.sh**
 After this command, the user needs to provide the year for which the forecast is required (2005 onwards) when prompted by the script to complete the run. 
 1. For the **forecasts in March** use **./obs_forecast_model_mar.sh**
 2. For the **forecasts in February** use **./obs_forecast_model_feb.sh**
 3. For the **forecasts in January** use **./obs_forecast_model_jan.sh**
 
 **Output:**
-The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line. All the downloaded data (CHIRPS rainfall and AMO index text file) is deleted.
+The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line. All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
 
-**Acknowedgement:**
-???
+**Acknowedgement:** Please include the following form of acknowledgement in any publications that use any of the code stored in this repository.
+
+The development of PEACFLOW_Manaus-flood-forecasting repository on GitHub (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting) was supported by the Newton Fund through the Met Office Climate Science for Service Partnership Brazil (CSSP Brazil) and was developed at University of Reading
 
 **Citation:**
 Users who apply the software resulting in presentations or papers are kindly asked to cite the publication below.
