@@ -1,13 +1,12 @@
 **Flood forecasting for Negro River at Manaus using observations**
 
 **Description:**
-This code forecasts maximum water level for Negro River at Manaus for any year from 2005 onwards. This repository has a shell script (.sh) which downloads the requred CHIRPS rainfall estimate and executes the flood forecasting model (.pkl) to give the flood forecast for the year requested (.py). There are three different forecast models hosted within the repository, which forecast maximum water level at Manaus at three different lead times: March (obs_forecast_model_mar.sh), February (obs_forecast_model_feb.sh) and January (obs_forecast_model_jan.sh). For any year (2005--curent), the forecast models only work after the middle of the month of the forecast, due to the lag in the CHIRPS rainfall uploads.
+This module contains models for forecasting maximum water level for Negro River at Manaus for any year from 2005 onwards. This repository has a shell script (.sh) which downloads the requred CHIRPS rainfall estimate and executes the flood forecasting model (.pkl) to give the flood forecast for the year requested (.py). There are three different forecast models hosted within the repository, which forecast maximum water level at Manaus at three different lead times: March (obs_forecast_model_mar.sh), February (obs_forecast_model_feb.sh) and January (obs_forecast_model_jan.sh). For any year (2005--curent), the forecast models only work after the middle of the month of the forecast, due to the lag in the CHIRPS rainfall uploads.
 
 **Requirements:**
 The models hosted in this repository need Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/), Numpy (http://www.numpy.org) and Pandas (https://pandas.pydata.org/)
 
-**Modules:**
-
+**Modules:** \
 For each forecast model there are three associated files:
 1. Shell Script (.sh): This is the main script that downloads the data, runs the model, gives the output and then deletes the downloaded data.
 2. Python Script (.py): This is the python script that calculated the output using the downloaded data and forecast model information. 
