@@ -8,27 +8,28 @@ The models hosted in this repository need Python (version3.7; https://www.python
 
 **Modules:** \
 For each forecast model there are three associated files:
-1. Shell Script (.sh): This is the main script that downloads the data, runs the model, gives the output and then deletes the downloaded data.
-2. Python Script (.py): This is the python script that calculated the output using the downloaded data and forecast model information. 
-3. Pandas File (.pkl): This is the statistical forecast model information that is used to calculate the output for each year. 
+- *Shell Script (.sh):* This is the main script that downloads the data, runs the model, gives the output and then deletes the downloaded data.
+- *Python Script (.py):* This is the python script that calculated the output using the downloaded data and forecast model information. 
+- *Pandas File (.pkl):* This is the statistical forecast model information that is used to calculate the output for each year. 
 
 Names of the three files associated with each forecast model:
-1. March: obs_forecast_model_mar.sh; obs_forecast_model_mar.py; obs_forecast_model_mar.pkl
-2. February: obs_forecast_model_feb.sh; obs_forecast_model_feb.py; obs_forecast_model_feb.pkl
-3. January: obs_forecast_model_jan.sh; obs_forecast_model_jan.py; obs_forecast_model_janr.pkl
+- *March:* obs_forecast_model_mar.sh; obs_forecast_model_mar.py; obs_forecast_model_mar.pkl
+- *February:* obs_forecast_model_feb.sh; obs_forecast_model_feb.py; obs_forecast_model_feb.pkl
+- *January:* obs_forecast_model_jan.sh; obs_forecast_model_jan.py; obs_forecast_model_janr.pkl
 
 Other accessory files are:
-1. water_level_at_manaus.nc: NetCDF file for historical water level for Negro River at Manaus to get previous year's minimum level.
-2. read_amo_index.py: Python script to read the AMO index from the downloaded amo.txt to get monthly AMO index. 
-3. max_chirps_???.npz: Numpy output files which have CHIRPS monthly rainfall masks for November (max_chirps_nov.npz), December (max_chirps_dec.npz), January (max_chirps_jan.npz), February (max_chirps_feb.npz)
+- *water_level_at_manaus.nc:* NetCDF file for historical water level for Negro River at Manaus to get previous year's minimum level.
+- *read_amo_index.py:* Python script to read the AMO index from the downloaded amo.txt to get monthly AMO index. 
+- *max_chirps_???.npz:* Numpy output files which have CHIRPS monthly rainfall masks for November (max_chirps_nov.npz), December (max_chirps_dec.npz), January (max_chirps_jan.npz), February (max_chirps_feb.npz)
 
 **Execution:**
 The model works by running the shell scripts of the month which needs the forecast using the example command below: 
 **./obs_forecast_model_mar.sh** OR **source obs_forecast_model_mar.sh**
+
 After this command, the user needs to provide the year for which the forecast is required (2005 onwards) when prompted by the script to complete the run. 
-1. For the **forecasts in March** use **./obs_forecast_model_mar.sh** OR **source obs_forecast_model_mar.sh** 
-2. For the **forecasts in February** use **./obs_forecast_model_feb.sh** OR **source obs_forecast_model_feb.sh** 
-3. For the **forecasts in January** use **./obs_forecast_model_jan.sh** OR **source obs_forecast_model_jan.sh** 
+1. For the forecasts to be **issued in March** use **./obs_forecast_model_mar.sh** OR **source obs_forecast_model_mar.sh** 
+2. For the forecasts to be **issued in February** use **./obs_forecast_model_feb.sh** OR **source obs_forecast_model_feb.sh** 
+3. For the forecasts to be **issued in January** use **./obs_forecast_model_jan.sh** OR **source obs_forecast_model_jan.sh** 
 
 **Output:**
 The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line. All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
