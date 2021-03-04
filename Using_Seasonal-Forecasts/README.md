@@ -12,7 +12,6 @@ For each forecast model there is one sub-folder:
 - *january_forecasts:*  This sub-folder for executing the model to get flood forecasts at January lead-time of each year. -
 
 Other accessory files within this module are required data files to execute the forecast models:
-- *chirps-mask_ecmwf-regrid.nc:*?????????????????????
 - *ecmwf_amo.npz:* Numpy output file which contains ECMWF seasonal forecast AMO input data standardization information.
 - *obs_data.npz:* Numpy output file which contains observed rainfall input data standardization information.
 - *ecmwf_data.npz:* Numpy output file which contains ECMWF seasonal forecast rainfall input data standardization information.
