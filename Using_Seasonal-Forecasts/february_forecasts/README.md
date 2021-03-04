@@ -2,12 +2,12 @@
 **Flood forecasting for Negro River at Manaus using seasonal forecasts for February lead-time**
 
 **Description:**
-This module contains models for forecasting maximum water level for Negro River at Manaus for any year from 2017 onwards using combination of observations and ECMWF seasonal forecasts as input. The required input data files are available in the parent directory (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Seasonal-Forecasts). This sub-folder has one model that provides forecasts at Februrary lead-time for each year. 
+This module contains models for forecasting maximum water level for Negro River at Manaus for any year from 2017 onwards using combination of observations and ECMWF seasonal forecasts as input. The required input data files are available in the parent directory (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Seasonal-Forecasts). This sub-folder has one model that provides forecasts at February lead-time for each year. 
 
 **Modules:** This sub-folder contains the following files:
 - *calculate_amo_index.py:* Python script that calculates the ECMWF AMO index from the downloaded ECMWF SST forecast NetCDF file.
 - *read_amo_index.py:* Python script to read the AMO index from the downloaded amo.txt to get monthly AMO index (as in https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations)
-- *feb_forecast_data_download.py:* Python script that downloads the ECMWF Februrary forecast of the year of forecast over Amazon region. This script downloads two NetCDF files, one for total-precipitation and another for sea-surface-temperature. 
+- *feb_forecast_data_download.py:* Python script that downloads the ECMWF February forecast of the year of forecast over Amazon region. This script downloads two NetCDF files, one for total-precipitation and another for sea-surface-temperature. 
 - *feb_forecast_output.py:* Python script that calculates the output using the downloaded observed and ECMWF forecast data and model information (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/blob/master/Using_Seasonal-Forecasts/obs_forecast_model_mar.pkl). It also uses data from the numpy files; .npz, stored in https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Seasonal-Forecasts.
 - *feb_forecast.sh:* This is the main script that downloads the data, runs the model, gives/saves the output and then deletes the downloaded data.
 
