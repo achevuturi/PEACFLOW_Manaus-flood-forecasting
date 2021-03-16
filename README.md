@@ -19,7 +19,7 @@
 
 **Description:** This repository contains models for forecasting annual maximum water level for Negro River at Manaus, using observations and seasonal forecasts data using the two modules. Each module within this repository ("*Using_Observations*" or "*Using_Seasonal-Forecasts*") has models that forecast annual maximum water level for Negro River at Manaus at different lead-time. For more details about the models and their execution please read the README.md files contained within each module folders. 
 
-**Copyright**?????
+**Copyright**: University of Reading
 
 **Acknowedgement:** Please include the following form of acknowledgement in any presentations/publications that use any of the code stored in this repository:\
 *"The development of PEACFLOW_Manaus-flood-forecasting repository on GitHub (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting) was supported by the Newton Fund through the Met Office Climate Science for Service Partnership Brazil (CSSP Brazil) and was developed at University of Reading."*
