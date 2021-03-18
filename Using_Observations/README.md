@@ -1,5 +1,31 @@
 **Flood forecasting for Negro River at Manaus using observations**
 
+! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------\
+! (C) Copyright 2021 University of Reading. All rights reserved.\
+! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------\
+!\
+! This file is part of the CSSP Brazil PEACFLOW Project. \
+!\
+! Please include the following form of acknowledgement in any presentations/publications\
+| that use any of the code stored in this repository:\
+! *"The development of PEACFLOW_Manaus-flood-forecasting repository Using_Observations module*\
+! *(https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations)* \
+! *was supported by the Newton Fund through the Met Office*\
+! *Climate Science for Service Partnership Brazil (CSSP Brazil)*\
+! *and was developed at University of Reading."*\
+!\
+! The CSSP Brazil PEACFLOW Project is free software: you can redistribute it and/or modify\
+! it under the terms of the Modified BSD License,\
+! as published by the Open Source Initiative.\
+!\
+! The CSSP Brazil PEACFLOW Project is distributed in the hope that it will be ! useful,\
+! but WITHOUT ANY WARRANTY; without even the implied warranty\
+! of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Modified BSD License for more details.\
+!\
+! For a copy of the Modified BSD License \
+! please see <http://opensource.org/licenses/BSD-3-Clause>.\
+! -----------------------------------------------------------------------------------------------------------------------------
+
 **Description:**
 This module contains models for forecasting maximum water level for Negro River at Manaus for any year from 2005 onwards using observations as input. This repository has a shell script (.sh) which downloads the requred CHIRPS rainfall estimate and executes the flood forecasting model (.pkl) to give the flood forecast for the year requested (.py). There are three different forecast models hosted within the repository, which forecast maximum water level at Manaus at three different lead times: March (obs_forecast_model_mar.sh), February (obs_forecast_model_feb.sh) and January (obs_forecast_model_jan.sh). For any year (2005--curent), the forecast models only work after the middle of the month of the forecast, due to the lag in the CHIRPS rainfall uploads.
 
@@ -33,9 +59,6 @@ After this command, the user needs to provide the year for which the forecast is
 
 **Output:**
 The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line. All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
-
-**Acknowedgement:** Please include the following form of acknowledgement in any presentations/publications that use any of the code stored in this repository:\
-"*The development of PEACFLOW_Manaus-flood-forecasting repository Using_Observations module on GitHub (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations) was supported by the Newton Fund through the Met Office Climate Science for Service Partnership Brazil (CSSP Brazil) and was developed at University of Reading*"
 
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
