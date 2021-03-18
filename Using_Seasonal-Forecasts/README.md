@@ -45,9 +45,6 @@ Other accessory files within this module are required data files to execute the 
 - *ecmwf_mask.npz:* Numpy output file which has ECMWF monthly rainfall masks for January and February, regridded from CHIRPS monthly rainfall masks.
 - *obs_forecast_model_mar.pkl:* This is the statistical model using observations that issues forecasts for March (as in https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations) which is implemented here with input from combination of observations and seasonal forecasts.
 
-**Acknowedgement:** Please include the following form of acknowledgement in any presentations/publications that use any of the code stored in this repository.\
-*"The development of PEACFLOW_Manaus-flood-forecasting repository Using_Seasonal-Forecasts module on GitHub (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Seasonal-Forecasts) was supported by the Newton Fund through the Met Office Climate Science for Service Partnership Brazil (CSSP Brazil) and was developed at University of Reading."*
-
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
 *Chevuturi A, Woolnough SJ, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Extending forecast lead time for annual maximum water level at Manaus using seasonal forecasts. Climate Resilience and Sustainability, in prep.*
