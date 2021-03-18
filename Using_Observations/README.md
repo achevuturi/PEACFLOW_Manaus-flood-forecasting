@@ -8,8 +8,8 @@
 !\
 ! Please include the following form of acknowledgement in any presentations/publications\
 | that use any of the code stored in this repository:\
-! *"The development of PEACFLOW_Manaus-flood-forecasting repository Using_Observations module*\
-! *(https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations)* \
+! *"The development of PEACFLOW_Manaus-flood-forecasting repository*\
+! *(https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting)* \
 ! *was supported by the Newton Fund through the Met Office*\
 ! *Climate Science for Service Partnership Brazil (CSSP Brazil)*\
 ! *and was developed at University of Reading."*\
