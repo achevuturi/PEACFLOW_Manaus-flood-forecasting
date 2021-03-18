@@ -7,9 +7,11 @@
 ! This file is part of the CSSP Brazil PEACFLOW Project. \
 !\
 ! Please include the following form of acknowledgement in any presentations/publications that use any of the code stored in this repository:\
-! *"The development of PEACFLOW_Manaus-flood-forecasting repository (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting)*\
-! *was supported by the Newton Fund through the Met Office Climate Science for Service Partnership Brazil*\
-! *(CSSP Brazil) and was developed at University of Reading."*\
+! *"The development of PEACFLOW_Manaus-flood-forecasting repository*\
+! *(https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting)*\
+! *was supported by the Newton Fund through the Met Office *\
+! *Climate Science for Service Partnership Brazil (CSSP Brazil)*\
+! *and was developed at University of Reading."*\
 !\
 ! The CSSP Brazil PEACFLOW Project is free software: you can redistribute it and/or modify it under the terms of the Modified BSD License,\
 ! as published by the Open Source Initiative.\
