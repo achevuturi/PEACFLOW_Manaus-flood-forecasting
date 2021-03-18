@@ -1,8 +1,8 @@
 **PEACFLOW_Manaus-flood-forecasting**
 
-! *****************************COPYRIGHT********************************
+! -----------------------------COPYRIGHT-------------------------------
 ! (C) Copyright 2021 University of Reading. All rights reserved.
-! *****************************COPYRIGHT********************************
+! -----------------------------COPYRIGHT-------------------------------
 !
 ! This file is part of the CSSP Brazil PEACFLOW Project. 
 ! Please include the following form of acknowledgement in any presentations/publications 
