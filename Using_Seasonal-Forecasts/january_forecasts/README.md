@@ -41,10 +41,7 @@ This module contains models for forecasting maximum water level for Negro River 
 **Output:**
 The esemble mean forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line, and the ensemble forecast is saved as an output .csv file. All the downloaded data is then deleted.
 
-**Acknowedgement:** Please include the following form of acknowledgement in any presentations/publications that use any of the code stored in this repository.\
-*"The development of PEACFLOW_Manaus-flood-forecasting repository Using_Seasonal-Forecasts module on GitHub (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Seasonal-Forecasts) was supported by the Newton Fund through the Met Office Climate Science for Service Partnership Brazil (CSSP Brazil) and was developed at University of Reading."*
-
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
-*Chevuturi A, Woolnough SJ, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Extending forecast lead time for annual maximum water level at Manaus using seasonal forecasts. Climate Resilience and Sustainability, in prep.*
+*Chevuturi A, Klingaman NP, Woolnough SJ, Rudorff CM, Coelho CAS, Schongart J (2021) Extending forecast lead time for annual maximum water level at Manaus using seasonal forecasts. Climate Resilience and Sustainability, in prep.*
 
