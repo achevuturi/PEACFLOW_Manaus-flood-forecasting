@@ -62,4 +62,4 @@ The forecast of the maximum water level of Negro River at Manaus (in meters) is 
 
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
-*Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for Negro River at Manaus. Climate Resilience and Sustainability, in prep.*
+*Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for the Negro River at Manaus. Climate Resilience and Sustainability, submitted.*
