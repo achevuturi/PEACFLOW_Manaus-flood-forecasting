@@ -1,4 +1,4 @@
-**Flood forecasting for Negro River at Manaus using seasonal forecasts**
+**Flood forecasting for the Negro River at Manaus using seasonal forecasts**
 
 ! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------\
 ! (C) Copyright 2021 University of Reading. All rights reserved.\
