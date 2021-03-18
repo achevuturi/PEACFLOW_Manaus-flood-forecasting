@@ -27,7 +27,7 @@
 ! -----------------------------------------------------------------------------------------------------------------------------
 
 **Description:**
-This module contains models for forecasting maximum water level for Negro River at Manaus for any year from 2017 onwards using combination of observations and ECMWF seasonal forecasts as input. This repository has required data files that are used to run the forecast models and the forecast models in sub-folders. There are two models within this module that provide forecasts at January and Februrary lead-time. For more details about the models and their execution please read the README.md files contained within each sub-folders.  
+This module contains models for forecasting maximum water level for the Negro River at Manaus for any year from 2017 onwards using combination of observations and ECMWF seasonal forecasts as input. This repository has required data files that are used to run the forecast models and the forecast models in sub-folders. There are two models within this module that provide forecasts at January and February lead-time. For more details about the models and their execution please read the README.md files contained within each sub-folders.  
 
 **Requirements:**
 The models hosted in this repository need Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/), Numpy (http://www.numpy.org), Pandas (https://pandas.pydata.org/) and CDSAPI (https://cds.climate.copernicus.eu/api-how-to)
