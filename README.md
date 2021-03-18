@@ -24,7 +24,7 @@
 !\
 ! For a copy of the Modified BSD License \
 ! please see <http://opensource.org/licenses/BSD-3-Clause>.\
-! ------------------------------------------------------------------------------------------------------------------------------\
+! -----------------------------------------------------------------------------------------------------------------------------
 
 **Author:** *Amulya Chevuturi*, National Centre for Atmospheric Science, Department of Meteorology, University of Reading, Reading, UK (a.chevuturi@reading.ac.uk)
 
