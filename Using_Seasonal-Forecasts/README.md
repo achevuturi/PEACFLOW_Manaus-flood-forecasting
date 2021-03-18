@@ -1,5 +1,31 @@
 **Flood forecasting for Negro River at Manaus using seasonal forecasts**
 
+! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------\
+! (C) Copyright 2021 University of Reading. All rights reserved.\
+! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------\
+!\
+! This file is part of the CSSP Brazil PEACFLOW Project. \
+!\
+! Please include the following form of acknowledgement in any presentations/publications\
+| that use any of the code stored in this repository:\
+! *"The development of PEACFLOW_Manaus-flood-forecasting repository*\
+! *(https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting)* \
+! *was supported by the Newton Fund through the Met Office*\
+! *Climate Science for Service Partnership Brazil (CSSP Brazil)*\
+! *and was developed at University of Reading."*\
+!\
+! The CSSP Brazil PEACFLOW Project is free software: you can redistribute it and/or modify\
+! it under the terms of the Modified BSD License,\
+! as published by the Open Source Initiative.\
+!\
+! The CSSP Brazil PEACFLOW Project is distributed in the hope that it will be ! useful,\
+! but WITHOUT ANY WARRANTY; without even the implied warranty\
+! of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Modified BSD License for more details.\
+!\
+! For a copy of the Modified BSD License \
+! please see <http://opensource.org/licenses/BSD-3-Clause>.\
+! -----------------------------------------------------------------------------------------------------------------------------
+
 **Description:**
 This module contains models for forecasting maximum water level for Negro River at Manaus for any year from 2017 onwards using combination of observations and ECMWF seasonal forecasts as input. This repository has required data files that are used to run the forecast models and the forecast models in sub-folders. There are two models within this module that provide forecasts at January and Februrary lead-time. For more details about the models and their execution please read the README.md files contained within each sub-folders.  
 
