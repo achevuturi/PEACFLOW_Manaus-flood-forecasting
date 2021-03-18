@@ -47,4 +47,4 @@ Other accessory files within this module are required data files to execute the 
 
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
-*Chevuturi A, Woolnough SJ, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Extending forecast lead time for annual maximum water level at Manaus using seasonal forecasts. Climate Resilience and Sustainability, in prep.*
+*Chevuturi A, Klingaman NP, Woolnough SJ, Rudorff CM, Coelho CAS, Schongart J (2021) Extending forecast lead time for annual maximum water level at Manaus using seasonal forecasts. Climate Resilience and Sustainability, in prep.*
