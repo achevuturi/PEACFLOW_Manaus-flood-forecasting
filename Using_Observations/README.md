@@ -58,7 +58,7 @@ After this command, the user needs to provide the year for which the forecast is
 3. For the forecasts to be **issued in January** use **./obs_forecast_model_jan.sh** OR **source obs_forecast_model_jan.sh** 
 
 **Output:**
-The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line, along with the uncertainity bounds of the forecast (5<sup>th<\sup> -- 95<sup>th<\sup> percentile range). All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
+The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line, along with the uncertainity bounds of the forecast (5<sup>th</sup> -- 95<sup>th</sup> percentile range). All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
 
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
