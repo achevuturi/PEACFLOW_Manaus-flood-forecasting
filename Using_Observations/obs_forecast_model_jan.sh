@@ -58,7 +58,7 @@ rm -f webpage.txt
 tput setaf 1 #red
 echo "Running the forecasting model for $year"
 tput sgr0 #black
-python3.7 -W ignore obs_forecast_model_jan.py $year
+python -W ignore obs_forecast_model_jan.py $year
 
 tput setaf 1 #red
 echo "Deleting dowloaded data"

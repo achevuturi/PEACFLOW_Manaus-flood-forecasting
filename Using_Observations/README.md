@@ -30,7 +30,7 @@
 This module contains models for forecasting maximum water level for the Negro River at Manaus for any year from 2005 onwards using observations as input. This repository has a shell script (.sh) which downloads the required CHIRPS rainfall estimate and executes the flood forecasting model (.pkl) to give the flood forecast for the year requested (.py). There are three different forecast models hosted within the repository, which forecast maximum water level at Manaus at three different lead times: March (obs_forecast_model_mar.sh), February (obs_forecast_model_feb.sh) and January (obs_forecast_model_jan.sh). For any year (2005--current), the forecast models only work after the middle of the month of the forecast, due to the lag in the CHIRPS rainfall uploads.
 
 **Requirements:**
-The models hosted in this repository need Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/), Numpy (http://www.numpy.org) and Pandas (https://pandas.pydata.org/)
+The models hosted in this repository need Python (version3.7; https://www.python.org/downloads/source/) and CDO (version1.9; https://code.mpimet.mpg.de/projects/cdo/). The package also requires installation of the the Python packages: Cf-Python (https://ncas-cms.github.io/cf-python/), Numpy (http://www.numpy.org), Pandas (https://pandas.pydata.org/) and SciPy (https://scipy.org/)
 
 **Modules:** \
 For each forecast model there are three associated files:
@@ -58,8 +58,8 @@ After this command, the user needs to provide the year for which the forecast is
 3. For the forecasts to be **issued in January** use **./obs_forecast_model_jan.sh** OR **source obs_forecast_model_jan.sh** 
 
 **Output:**
-The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line. All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
+The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line, along with the uncertainity bounds of the forecast (5th -- 95th percentile range). All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
 
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
-*Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for the Negro River at Manaus. Climate Resilience and Sustainability, submitted.*
+*Chevuturi A, Klingaman NP, Rudorff CM, Coelho CAS, Schongart J (2021) Forecasting annual maximum water level for the Negro River at Manaus. Climate Resilience and Sustainability, https://doi.org/10.1002/cli2.18.*

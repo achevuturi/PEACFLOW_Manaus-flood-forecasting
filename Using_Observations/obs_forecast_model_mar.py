@@ -1,37 +1,9 @@
-'''
-! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------
-! (C) Copyright 2021 University of Reading. All rights reserved.
-! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------
-!
-! This file is part of the CSSP Brazil PEACFLOW Project. 
-!
-! Please include the following form of acknowledgement in any presentations/publications
-| that use any of the code stored in this repository:
-! "The development of PEACFLOW_Manaus-flood-forecasting repository 
-! (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting)
-! was supported by the Newton Fund through the Met Office 
-! Climate Science for Service Partnership Brazil (CSSP Brazil) 
-! and was developed at University of Reading."
-!
-! The CSSP Brazil PEACFLOW Project is free software: you can redistribute it and/or modify
-! it under the terms of the Modified BSD License,
-! as published by the Open Source Initiative.
-!
-! The CSSP Brazil PEACFLOW Project is distributed in the hope that it will be ! useful,
-! but WITHOUT ANY WARRANTY; without even the implied warranty
-! of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Modified BSD License for more details.
-!
-! For a copy of the Modified BSD License 
-! please see <http://opensource.org/licenses/BSD-3-Clause>.
-! -----------------------------------------------------------------------------------------------------------------------------
-'''
-
 import cf
 import numpy as np
 import pandas as pd
+from scipy.stats import norm
 import read_amo_index as idxamo
 import sys
-import colorama
 from colorama import Fore, Style
 
 YR=int(sys.argv[1:][0])
@@ -40,6 +12,8 @@ YR=int(sys.argv[1:][0])
 forecast_model = pd.read_pickle('obs_forecast_model_mar.pkl')
 
 #Previous year minimum
+#dep = cf.read('water_level_at_manaus.nc')[0]
+#pmin = np.nanmin(dep.subspace(T=cf.year(YR-1)).array)
 f = np.loadtxt("prev_min.txt", comments="#", delimiter=",", unpack=False)
 pmin = f[0] + (f[1]/100)
 
@@ -70,8 +44,14 @@ rain   = (rndjf-forecast_model['Mean'].loc['Rain_NDJF'])/forecast_model['SD'].lo
 input_var = np.array([rain, YR, pmin, amo])
 
 #Calculating the forecast
-forecast = np.nansum(forecast_model['Coefficients'][1:].values*input_var) + forecast_model['Coefficients'][0]
+forecast = np.nansum(forecast_model['Coefficients'][1:-1].values*input_var) + forecast_model['Coefficients'][0]
 
-#Printing forecast
+#Calculate uncertainity (5th to 95th percentile)
+bounds = (0.05, 0.95)
+uc05, uc95 = (norm.ppf(bounds[0], loc=forecast, scale=forecast_model['SD']['Error']),
+              norm.ppf(bounds[1], loc=forecast, scale=forecast_model['SD']['Error']))
+
+#Printing forecast and uncertainity
 print(Fore.BLUE + str('Forecast for year ')+str(YR)+' = '+format(forecast, '.2f')+'m')
+print(Fore.BLUE + str('Uncertainity (5th -- 95th percentile) = ')+format(uc05, '.2f')+'m -- '+format(uc95, '.2f')+'m')
 print(Style.RESET_ALL)
