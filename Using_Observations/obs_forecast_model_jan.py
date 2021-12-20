@@ -12,8 +12,6 @@ YR=int(sys.argv[1:][0])
 forecast_model = pd.read_pickle('obs_forecast_model_jan.pkl')
 
 #Previous year minimum
-#dep = cf.read('water_level_at_manaus.nc')[0]
-#pmin = np.nanmin(dep.subspace(T=cf.year(YR-1)).array)
 f = np.loadtxt("prev_min.txt", comments="#", delimiter=",", unpack=False)
 pmin = f[0] + (f[1]/100)
 
