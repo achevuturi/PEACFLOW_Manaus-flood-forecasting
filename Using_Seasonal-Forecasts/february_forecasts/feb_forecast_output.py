@@ -1,39 +1,10 @@
-'''
-! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------
-! (C) Copyright 2021 University of Reading. All rights reserved.
-! ----------------------------------------------------------COPYRIGHT----------------------------------------------------------
-!
-! This file is part of the CSSP Brazil PEACFLOW Project. 
-!
-! Please include the following form of acknowledgement in any presentations/publications
-| that use any of the code stored in this repository:
-! "The development of PEACFLOW_Manaus-flood-forecasting repository 
-! (https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting)
-! was supported by the Newton Fund through the Met Office 
-! Climate Science for Service Partnership Brazil (CSSP Brazil) 
-! and was developed at University of Reading."
-!
-! The CSSP Brazil PEACFLOW Project is free software: you can redistribute it and/or modify
-! it under the terms of the Modified BSD License,
-! as published by the Open Source Initiative.
-!
-! The CSSP Brazil PEACFLOW Project is distributed in the hope that it will be ! useful,
-! but WITHOUT ANY WARRANTY; without even the implied warranty
-! of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Modified BSD License for more details.
-!
-! For a copy of the Modified BSD License 
-! please see <http://opensource.org/licenses/BSD-3-Clause>.
-! -----------------------------------------------------------------------------------------------------------------------------
-'''
-
 import cf
 import numpy as np
 import pandas as pd
 import read_amo_index as idxamo
 import calculate_amo_index as calamo
+import model_uncertainity as mu
 import sys
-#import colorama
-#from colorama import Fore, Style
 
 YR=int(sys.argv[1:][0])
 #YR = 2020
@@ -87,9 +58,7 @@ for e in range(ENS):
 
 efeb = (efeb-mn_ff)/sd_ff
 
-#Previous year minimum
-#dep = cf.read('../water_level_at_manaus.nc')[0]
-#pmin = np.nanmin(dep.subspace(T=cf.year(YR-1)).array)
+#Previous year's minimum
 f = np.loadtxt("prev_min.txt", comments="#", delimiter=",", unpack=False)
 pmin = f[0] + (f[1]/100)
 
@@ -104,19 +73,25 @@ for e in range(ENS):
   new[e,:] = np.array([idx[0], idx[1], idx[2], famo_feb[e]])
 fafeb = np.nanmean(new, axis=1)
 
+#Input to data and calculating the forecast
 forfeb = np.zeros((efeb.shape))
-#Input to data
 for e in range(ENS):
   input_var = np.array([efeb[e], YR, pmin, fafeb[e]])
-  forfeb[e] = np.nansum(forecast_model['Coefficients'][1:].values*input_var) + forecast_model['Coefficients'][0]
+  forfeb[e] = np.nansum(forecast_model['Coefficients'][1:-1].values*input_var) + forecast_model['Coefficients'][0]
 
 forecast = np.nanmean(forfeb, 0)
+
+#Calculate uncertainity (5th to 95th percentile)
+bounds = (0.05, 0.95)
+uc05, uc95 = (mu.mix_norm_ppf(bounds[0], forfeb, forecast_model['SD']['Error']),
+              mu.mix_norm_ppf(bounds[1], forfeb, forecast_model['SD']['Error']))
+
 #Printing forecast
-#print(Fore.BLUE + str('Ensemble mean forecast for year ')+str(YR)+' = '+format(forecast, '.2f')+'m')
 print(str('Ensemble mean forecast for year ')+str(YR)+' = '+format(forecast, '.2f')+'m')
 
-#Saving ensemble forecast
+#Saving ensemble forecast and uncertainity
 np.savetxt(str(YR)+'_ensemble_forecast.csv', forfeb, delimiter=',')
-#print(Fore.BLUE + str('Saving ensemble forecasts for year ')+str(YR)+' in a csv file')
 print(str('Saving ensemble forecasts for year ')+str(YR)+' in a csv file')
-#print(Style.RESET_ALL)
+
+#Printing Uncertainity
+print(str('Uncertainity (5th -- 95th percentile) = ')+format(uc05, '.2f')+'m -- '+format(uc95, '.2f')+'m')

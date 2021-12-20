@@ -26,11 +26,11 @@
 # please see <http://opensource.org/licenses/BSD-3-Clause>.
 # -----------------------------------------------------------------------------------------------------------------------------
 
-# This script will give you the forecast for the year requested (2005 onwards) for March lead time
+# This script will give you the forecast for the year requested (2017 onwards) for March lead time
 
 tput setaf 1 #red
 echo "Forecast model for maximum water level of Negro River at Manaus (lead time MARCH)"
-echo "Please enter the year for which the forecast is requred (YYYY, 4 digits 2005 onwards), followed by [ENTER]:"
+echo "Please enter the year for which the forecast is requred (YYYY, 4 digits 2017 onwards), followed by [ENTER]:"
 tput sgr0 #black
 read year
 
@@ -76,7 +76,7 @@ rm -f amon.us.long.data
 tput setaf 1 #red
 echo "Running the forecasting model for $year"
 tput sgr0 #black
-python3.7 -W ignore feb_forecast_output.py $year
+python -W ignore feb_forecast_output.py $year
 
 tput setaf 1 #red
 echo "Deleting dowloaded data"

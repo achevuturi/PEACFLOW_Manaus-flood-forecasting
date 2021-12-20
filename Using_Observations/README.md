@@ -36,7 +36,7 @@ The models hosted in this repository need Python (version3.7; https://www.python
 For each forecast model there are three associated files:
 - *Shell Script (.sh):* This is the main script that downloads the data, runs the model, gives the output and then deletes the downloaded data.
 - *Python Script (.py):* This is the python script that calculated the output using the downloaded data and forecast model information. 
-- *Pandas File (.pkl):* This is the statistical forecast model information that is used to calculate the output for each year. 
+- *Pandas File (.pkl):* This is the statistical forecast model information that is used to calculate the output for each year. This file also includes the scale of errors for the validation period of model which are used to provide the model uncerstainity for the forecast. 
 
 Names of the three files associated with each forecast model:
 - *March:* obs_forecast_model_mar.sh; obs_forecast_model_mar.py; obs_forecast_model_mar.pkl

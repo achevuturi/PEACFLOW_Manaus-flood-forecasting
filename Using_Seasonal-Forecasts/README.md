@@ -43,8 +43,8 @@ Other accessory files within this module are required data files to execute the 
 - *ecmwf_data.npz:* Numpy output file which contains ECMWF seasonal forecast rainfall input data standardization information.
 - *max_chirps_???.npz:* Numpy output files which have CHIRPS monthly rainfall masks for November (max_chirps_nov.npz), December (max_chirps_dec.npz), January (max_chirps_jan.npz) (as in https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations).
 - *ecmwf_mask.npz:* Numpy output file which has ECMWF monthly rainfall masks for January and February, regridded from CHIRPS monthly rainfall masks.
-- *obs_forecast_model_mar.pkl:* This is the statistical model using observations that issues forecasts for March (as in https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations) which is implemented here with input from combination of observations and seasonal forecasts.
+- *obs_forecast_model_mar.pkl:* This is the statistical model using observations that issues forecasts for March (as in https://github.com/achevuturi/PEACFLOW_Manaus-flood-forecasting/tree/master/Using_Observations) which is implemented here with input from combination of observations and seasonal forecasts. This file also includes the scale of errors for the validation period of model which are used to provide the model uncerstainity for the forecast. 
 
 **Citation:**
 Users who apply the code resulting in presentations/publications are kindly asked to cite the publication below:\
-*Chevuturi A, Klingaman NP, Woolnough SJ, Rudorff CM, Coelho CAS, Schongart J (2021) Extending forecast lead time for annual maximum water level at Manaus using seasonal forecasts. Climate Resilience and Sustainability, in prep.*
+*Chevuturi A, Klingaman NP, Woolnough SJ, Rudorff CM, Coelho CAS, Schongart J (2021) Extending forecast lead time for annual maximum water level at Manaus using seasonal forecasts. Climate Services, submitted.*
