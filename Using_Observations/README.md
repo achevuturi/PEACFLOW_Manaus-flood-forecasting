@@ -50,12 +50,12 @@ Other accessory files are:
 
 **Execution:**
 The model works by running the shell scripts of the month which needs the forecast using the example command below: 
-**./obs_forecast_model_mar.sh** OR **source obs_forecast_model_mar.sh**
+**bash obs_forecast_model_mar.sh** OR **./obs_forecast_model_mar.sh** OR **source obs_forecast_model_mar.sh**
 
 After this command, the user needs to provide the year for which the forecast is required (2005 onwards) when prompted by the script to complete the run. 
-1. For the forecasts to be **issued in March** use **./obs_forecast_model_mar.sh** OR **source obs_forecast_model_mar.sh** 
-2. For the forecasts to be **issued in February** use **./obs_forecast_model_feb.sh** OR **source obs_forecast_model_feb.sh** 
-3. For the forecasts to be **issued in January** use **./obs_forecast_model_jan.sh** OR **source obs_forecast_model_jan.sh** 
+1. For the forecasts to be **issued in March**    use **bash obs_forecast_model_mar.sh** OR **./obs_forecast_model_mar.sh** OR **source obs_forecast_model_mar.sh** 
+2. For the forecasts to be **issued in February** use **bash obs_forecast_model_feb.sh** OR **./obs_forecast_model_feb.sh** OR **source obs_forecast_model_feb.sh** 
+3. For the forecasts to be **issued in January**  use **bash obs_forecast_model_jan.sh** OR **./obs_forecast_model_jan.sh** OR **source obs_forecast_model_jan.sh** 
 
 **Output:**
 The forecast of the maximum water level of Negro River at Manaus (in meters) is given in the command line, along with the uncertainity bounds of the forecast (5<sup>th</sup> -- 95<sup>th</sup> percentile range). All the downloaded data (CHIRPS rainfall and AMO index text file) is then deleted.
