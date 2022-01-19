@@ -67,7 +67,11 @@ m = np.load('../'+mod+'_amo.npz')
 amo_mn_ff=m['amo_mn_ff']
 famo_feb = (calamo.cal_amo_index(mod,SYS,ENS,YR,2,0)) - amo_mn_ff
 MON = np.array([1,11,12])
-idx = idxamo.amo_index(YR-1,YR,MON)[1:-2]
+idx = idxamo.amo_index(YR-1,YR,MON)
+if idx.size == 6:
+  idx = idx[1:-2]
+elif idx.size == 5:
+  idx = idx[1:-1]
 new = np.zeros((ENS,4))
 for e in range(ENS):
   new[e,:] = np.array([idx[0], idx[1], idx[2], famo_feb[e]])
