@@ -74,7 +74,9 @@ amo_mn_jf=m['amo_mn_jf']
 famo_jan = (calamo.cal_amo_index(mod,SYS,ENS,YR,1,0)) - amo_mn_jj
 famo_feb = (calamo.cal_amo_index(mod,SYS,ENS,YR,1,1)) - amo_mn_jf
 MON = np.array([11,12])
-idx = idxamo.amo_index(YR-1,YR,MON)[:-2]
+idx = idxamo.amo_index(YR-1,YR,MON)
+if idx.size == 4:
+  idx = idx[:-2]
 new = np.zeros((ENS,4))
 for e in range(ENS):
   new[e,:] = np.array([idx[0], idx[1], famo_jan[e], famo_feb[e]])
