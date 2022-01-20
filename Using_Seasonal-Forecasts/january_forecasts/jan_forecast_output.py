@@ -49,8 +49,8 @@ rjan = np.zeros((ENS)); rfeb = np.zeros((ENS));
 model = cf.read(mod+'_system'+str(SYS)+'_forecast_'+str(YR)+'0101_total_precipitation_monthly.nc')[0]
 model = model.subspace(X=cf.wi(-85,-33), Y=cf.wi(-40,15)).squeeze()
 for e in range(ENS):
- rjan[e] = np.nanmean(((model.subspace(T=cf.month(1)).squeeze().array)[e,:,:])*(mask[2,:,:]))
- rfeb[e] = np.nanmean(((model.subspace(T=cf.month(2)).squeeze().array)[e,:,:])*(mask[3,:,:]))
+  rjan[e] = np.nanmean(((model.subspace(T=cf.month(1)).squeeze().array)[e,:,:])*(mask[2,:,:]))
+  rfeb[e] = np.nanmean(((model.subspace(T=cf.month(2)).squeeze().array)[e,:,:])*(mask[3,:,:]))
 
 erjan = (rjan-mod_mn_jj)/mod_sd_jj
 erfeb = (rfeb-mod_mn_jf)/mod_sd_jf
