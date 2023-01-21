@@ -49,7 +49,7 @@ bounds = (0.05, 0.95)
 uc05, uc95 = (norm.ppf(bounds[0], loc=forecast, scale=forecast_model['SD']['Error']),
               norm.ppf(bounds[1], loc=forecast, scale=forecast_model['SD']['Error']))
 
-#Printing forecast and uncertainity
+#Printing forecast and uncertainty
 print(Fore.BLUE + str('Forecast for year ')+str(YR)+' = '+format(forecast, '.2f')+'m')
 print(Fore.BLUE + str('Uncertainty (5th -- 95th percentile) = ')+format(uc05, '.2f')+'m -- '+format(uc95, '.2f')+'m')
 print(Style.RESET_ALL)

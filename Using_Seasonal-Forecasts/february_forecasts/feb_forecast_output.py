@@ -97,5 +97,5 @@ print(str('Ensemble mean forecast for year ')+str(YR)+' = '+format(forecast, '.2
 np.savetxt(str(YR)+'_ensemble_forecast.csv', forfeb, delimiter=',')
 print(str('Saving ensemble forecasts for year ')+str(YR)+' in a csv file')
 
-#Printing Uncertainity
-print(str('Uncertainity (5th -- 95th percentile) = ')+format(uc05, '.2f')+'m -- '+format(uc95, '.2f')+'m')
+#Printing Uncertainty
+print(str('Uncertainty (5th -- 95th percentile) = ')+format(uc05, '.2f')+'m -- '+format(uc95, '.2f')+'m')
