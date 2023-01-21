@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import read_amo_index as idxamo
 import calculate_amo_index as calamo
-import model_uncertainity as mu
+import model_uncertainty as mu
 import sys
 
 YR=int(sys.argv[1:][0])
@@ -90,7 +90,7 @@ for e in range(ENS):
 
 forecast = np.nanmean(forjan, 0)
 
-#Calculate uncertainity (5th to 95th percentile)
+#Calculate uncertainty (5th to 95th percentile)
 bounds = (0.05, 0.95)
 uc05, uc95 = (mu.mix_norm_ppf(bounds[0], forjan, forecast_model['SD']['Error']),
               mu.mix_norm_ppf(bounds[1], forjan, forecast_model['SD']['Error']))

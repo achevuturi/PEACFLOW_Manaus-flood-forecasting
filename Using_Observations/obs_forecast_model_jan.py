@@ -36,7 +36,7 @@ input_var = np.array([rain, YR, pmin])
 #Calculating the forecast
 forecast = np.nansum(forecast_model['Coefficients'][1:-1].values*input_var) + forecast_model['Coefficients'][0]
 
-#Calculate uncertainity (5th to 95th percentile)
+#Calculate uncertainty (5th to 95th percentile)
 bounds = (0.05, 0.95)
 uc05, uc95 = (norm.ppf(bounds[0], loc=forecast, scale=forecast_model['SD']['Error']),
               norm.ppf(bounds[1], loc=forecast, scale=forecast_model['SD']['Error']))
