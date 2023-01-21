@@ -54,7 +54,7 @@ echo "Downloading previous year's minimum value"
 tput sgr0 #black
 wget https://www.portodemanaus.com.br/?pagina=niveis-maximo-minimo-do-rio-negro -O webpage.txt
 var=`grep -n ">$((year-1))</td>" webpage.txt | cut -f1 -d":"`
-awk "NR==$((var+3))" webpage.txt | tail -c 12 | cut -c1-5 > prev_min.txt
+awk "NR==$((var+3))" webpage.txt | tail -c 11 | cut -c1-5 > prev_min.txt
 rm -f webpage.txt
 
 tput setaf 1 #red
