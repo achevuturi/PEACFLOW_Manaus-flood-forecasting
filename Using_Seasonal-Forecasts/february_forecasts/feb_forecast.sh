@@ -80,5 +80,5 @@ python -W ignore feb_forecast_output.py $year
 
 tput setaf 1 #red
 echo "Deleting dowloaded data"
-rm -f prev_min.txt amo.txt chirps-v2.0.*.mons_p05.nc ecmwf_system5_forecast_*.nc
+rm -f prev_min.txt amo.txt chirps-v2.0.*.mons_p05.nc ecmwf_system*_forecast_*.nc
 tput sgr0 #black

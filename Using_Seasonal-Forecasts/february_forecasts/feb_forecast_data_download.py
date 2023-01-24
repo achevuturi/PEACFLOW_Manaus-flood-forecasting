@@ -35,7 +35,11 @@ yr=int(sys.argv[1:][0])
 center = 'ecmwf'
 mod = 'ecmwf'
 mon = 2
-sys = 5
+#sys = 5
+if yr < 2023:
+  sys = 5
+else:
+  sys = 51
 
 var = 'total_precipitation'
 c = cdsapi.Client()

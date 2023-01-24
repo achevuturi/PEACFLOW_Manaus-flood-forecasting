@@ -10,8 +10,12 @@ YR=int(sys.argv[1:][0])
 #YR = 2020
 
 mod = 'ecmwf'
-ENS=51
-SYS=5
+ENS = 51
+#SYS = 5
+if YR < 2023:
+  SYS = 5
+else:
+  SYS = 51
 
 #Reading the forecasting model 
 forecast_model = pd.read_pickle('../obs_forecast_model_mar.pkl')
